@@ -2,7 +2,6 @@ console.log('inside server.js');
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var logger = require('morgan');
 var mongoose = require('mongoose');
 var path = require('path');
 
@@ -23,10 +22,6 @@ var PORT = process.env.PORT || 3000;
 
 var app = express();
 
-app.use(logger("dev"));
-app.use(bodyParser.urlencoded({
-	extended: false
-}));
 
 app.use(express.static("public"));
 
